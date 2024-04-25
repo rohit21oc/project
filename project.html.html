@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project - 1</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            border: 2px solid black;
+            margin: 5px;
+        }
+        .main{
+            display: flex;
+            justify-content: center;
+        }
+        #white{
+            
+            background-color: white;
+        }
+        #yellow{
+            background-color: yellow;
+        }
+        #blue{
+            background-color: blue;
+        }
+        #black{
+            background-color: black;
+            border: 2px solid white;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div id="white" class="box"></div>
+        <div id="yellow" class="box"></div>
+        <div id="blue" class="box"></div>
+        <div id="black" class="box"></div>
+    </div>
+    <script>
+        let buttons = document.querySelectorAll('.box');
+        let body = document.querySelector('body');
+
+       buttons.forEach(function(button){
+        button.addEventListener("click",function(e){
+            console.log(e)
+            console.log(e.target);
+            if(e.target.id == 'white'){
+                body.style.backgroundColor = e.target.id;
+            }
+            if(e.target.id == 'yellow'){
+                body.style.backgroundColor = e.target.id;
+            }
+            if(e.target.id == 'blue'){
+                body.style.backgroundColor = e.target.id;
+            }
+            if(e.target.id == 'black'){
+                body.style.backgroundColor = e.target.id;
+            }
+        })
+       })
+    </script>
+</body>
+</html>
